@@ -1,0 +1,22 @@
+name: Test
+
+on: push
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./
+        id: convert_to_html
+        with:
+          product-name: 'Test Product'
+          vpat-location: 'test/vpats'
+
+      - run: echo -e ${{ steps.convert_to_html.outputs.stringified-html }} > vpat.html
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: result
+          path: vpat.html

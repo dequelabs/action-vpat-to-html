@@ -1,0 +1,28 @@
+{
+  "name": "action-vpat-to-html",
+  "version": "0.1.0",
+  "description": "GitHub Action to convert a markdown VPAT report to HTML",
+  "main": "dist/index.js",
+  "repository": "https://github.com/dequelabs/action-vpat-to-html.git",
+  "author": "Deque Systems, Inc.",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "ncc build --source-map src/index.ts",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "dedent": "^1.5.1",
+    "marked": "^7.0.2",
+    "marked-gfm-heading-id": "^3.0.6",
+    "marked-mangle": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/marked": "^5.0.1",
+    "@types/node": "^20.4.9",
+    "@vercel/ncc": "^0.36.1",
+    "husky": "^8.0.3",
+    "typescript": "^5.1.6"
+  }
+}

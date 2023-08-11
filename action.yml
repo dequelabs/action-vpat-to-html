@@ -1,0 +1,19 @@
+name: VPAT to HTML
+description: Convert a markdown VPAT report to HTML
+author: Deque Systems, Inc.
+
+inputs:
+  product-name:
+    description: Human-readable product name
+    required: true
+  vpat-location:
+    description: Path to directory containing VPATs
+    default: vpats
+
+outputs:
+  stringified-html:
+    description: Stringified HTML content of VPAT report
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
