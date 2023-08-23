@@ -87,7 +87,7 @@ function generateHTMLWithStylesheet(
   marked.use(gfmHeadingId())
   const htmlContent = marked.parse(markdownContent)
   const htmlWithStylesheet = dedent`
-    <html>
+    <html lang="en">
       <head>
         <title>VPAT for ${productName}</title>
         <style>

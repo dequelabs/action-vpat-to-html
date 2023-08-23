@@ -2912,7 +2912,7 @@ function generateHTMLWithStylesheet(markdownContent, stylesheetContent) {
     marked_1.marked.use((0, marked_gfm_heading_id_1.gfmHeadingId)());
     const htmlContent = marked_1.marked.parse(markdownContent);
     const htmlWithStylesheet = (0, dedent_1.default) `
-    <html>
+    <html lang="en">
       <head>
         <title>VPAT for ${productName}</title>
         <style>
