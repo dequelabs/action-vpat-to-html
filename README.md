@@ -21,13 +21,13 @@ jobs:
 
       - name: Convert most recent VPAT to HTML
         uses: dequelabs/action-vpat-to-html@main
-        id: convert_to_html
+        id: vpat-to-html
         with:
-          product-name: 'My Product'
+          product-name: My Product
           vpat-location: vpats
 
       - name: Write HTML to file
-        run: echo -e ${{ steps.convert_to_html.outputs.stringified-html }} > vpat.html
+        run: echo -e ${{ steps.vpat-to-html.outputs.stringified-html }} > vpat.html
 ```
 
 ## Inputs
